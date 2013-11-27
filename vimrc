@@ -6,49 +6,17 @@
 " Install Vundle first
 "  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 "
-set nocompatible               " be iMproved
-filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+" be iMproved
+set nocompatible
+" required
 
-" My Bundles here:
-"
-" original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-Bundle 'scrooloose/nerdtree'
-Bundle 'msanders/snipmate.vim'
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'Syntastic'
-Bundle 'matchit.zip'
-"Bundle 'taglist.vim'
-Bundle 'Tagbar'
-" non github repos
-Bundle 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (ie. when working on your own plugin)
-" Bundle 'file:///Users/gmarik/path/to/plugin'
-" ...
+" Use Vundle to manage plugins
+so ~/.vim/vundle_packages.vim
+
 
 filetype plugin indent on     " required!
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
 
 set softtabstop=2 shiftwidth=2 expandtab
 set ruler
@@ -92,3 +60,6 @@ let g:syntastic_javascript_checkers=['jslint']
 
 " Sudo Save when vim accidentally opened without sudo
 cmap w!! %!sudo tee > /dev/null %
+
+" Add a cheat sheet for search command (I always forget!)
+command SearchHelp sview ~/.vim/search_tips.markdown
