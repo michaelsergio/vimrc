@@ -3,6 +3,9 @@
 " Description: My Vimrc file using bundler
 " Last Modified: November 27, 2013
 
+" Install Vundle first
+"  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+"
 set nocompatible               " be iMproved
 filetype off                   " required!
 
