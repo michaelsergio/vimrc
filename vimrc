@@ -64,3 +64,5 @@ cmap w!! %!sudo tee > /dev/null %
 
 " Add a cheat sheet for search command (I always forget!)
 command SearchHelp sview ~/.vim/search_tips.markdown
+" Cheat sheet for other random intresting things
+command Tips sview ~/.vim/tips.markdown
