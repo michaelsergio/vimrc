@@ -1,3 +1,8 @@
+" File: .vimrc
+" Author: Michael Sergio
+" Description: My Vimrc file using bundler
+" Last Modified: November 27, 2013
+
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -17,10 +22,12 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree'
+Bundle 'msanders/snipmate.vim'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Syntastic'
+Bundle 'matchit.zip'
 "Bundle 'taglist.vim'
 Bundle 'Tagbar'
 " non github repos
@@ -76,6 +83,9 @@ augroup python
   let g:syntastic_python_checkers=['pylint', 'pep8']
   au FileType python set autoindent smartindent et sts=4 sw=4 tw=80 fo=croq
 augroup END
+
+
+let g:syntastic_javascript_checkers=['jslint']
 
 " Sudo Save when vim accidentally opened without sudo
 cmap w!! %!sudo tee > /dev/null %
