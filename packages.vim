@@ -3,7 +3,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " required! 
-Bundle 'gmarik/vundle'
+ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 "
@@ -20,6 +20,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Syntastic'
 Bundle 'matchit.zip'
+Bundle 'tComment'
 "Bundle 'taglist.vim'
 Bundle 'Tagbar'
 " non github repos

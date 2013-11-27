@@ -13,7 +13,7 @@ set nocompatible
 " required
 
 " Use Vundle to manage plugins
-so ~/.vim/vundle_packages.vim
+so ~/.vim/packages.vim
 
 
 filetype plugin indent on     " required!
