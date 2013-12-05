@@ -28,6 +28,15 @@ Yank surrounding insert word "the stuff"
 or Visually do 
 S<em>
 
+</em> # Escaping markdown html
+
+vimdiff
+=======
+do   diff obtain (from other file)
+dp   diff put    (  on other file)
+]c   next change
+[c   prev change
+
 
 
 
