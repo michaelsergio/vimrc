@@ -1,6 +1,21 @@
 Tips
 =====
 
+Marks
+-------
+ma      mark a at current loc
+'a      goto a
+d'a     delete from here to mark a
+c'a     change from here to mark a
+y'a     yank   from here to mark a
+:marks  show all marks
+`.      jump to last change
+`"      jump to last exited
+``      jump back to last jump pos
+''      jump back to last jump line
+:delmarks ab   delete mark a and b
+
+
 Unwrap long line to 80 characters
 ---------------------------------
 gq 
@@ -30,14 +45,15 @@ S<em>
 
 </em> # Escaping markdown html
 
+Get Current File
+----------------
+c-g
+
+
 vimdiff
 =======
 do   diff obtain (from other file)
 dp   diff put    (  on other file)
 ]c   next change
 [c   prev change
-
-
-
-
 
