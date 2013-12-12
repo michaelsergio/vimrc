@@ -62,6 +62,8 @@ let g:syntastic_javascript_checkers=['jslint']
 " Sudo Save when vim accidentally opened without sudo
 cmap w!! %!sudo tee > /dev/null %
 
+command OnlineHelp ! google-chrome http://vimhelp.appspot.com/usr_toc.txt.html
+
 " Add a cheat sheet for search command (I always forget!)
 command SearchHelp sview ~/.vim/search_tips.markdown
 " Cheat sheet for other random intresting things
