@@ -18,6 +18,8 @@ Swap Header/Source
 
 <% is filename without extension
 
+
+
 Unwrap long line to 80 characters
 ---------------------------------
 gq 
@@ -37,6 +39,7 @@ Change surrounding double quote to single quote
 
 Emphasize hello (surround)
 --------------------------
+``
 ysiw<em>
 <em>Hello</em> world! 
 
@@ -44,8 +47,7 @@ Yank surrounding insert word "the stuff"
 
 or Visually do 
 S<em>
-
-</em> # Escaping markdown html
+``
 
 Get Current File
 ----------------

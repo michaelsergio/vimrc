@@ -1,6 +1,11 @@
 :substitute
 ================
 
+
+Substitute with tpope/abolish
+--------------------------------
+:Subvert/child{,ren}/adult{,s}/g
+
 Replace All
 -----------
   :%s/foo/bar/g

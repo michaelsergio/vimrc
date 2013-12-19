@@ -68,3 +68,7 @@ command OnlineHelp ! google-chrome http://vimhelp.appspot.com/usr_toc.txt.html
 command SearchHelp sview ~/.vim/search_tips.markdown
 " Cheat sheet for other random intresting things
 command Tips sview ~/.vim/tips.markdown
+
+" Common misspelling should go here
+" iabbrev  seperate  separate 
+
