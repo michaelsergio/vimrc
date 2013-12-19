@@ -37,6 +37,11 @@ cs"'
 Change surrounding double quote to single quote
 
 
+Delete inside quotes (including quotes)
+---------------------------------------
+Instead of di"  to delete inside quotes
+use        da"  to delete a quote block
+
 Emphasize hello (surround)
 --------------------------
 ``
