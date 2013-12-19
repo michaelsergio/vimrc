@@ -1,6 +1,17 @@
 Tips
 =====
 
+Case Coercian [abolish.vim]
+---------------------------------
+``
+crc  to camelCase   (fooBar)
+crm  to MixedCase   (FooBar)
+cr_  or
+crs  to snake_case  (foo_bar)
+cru  to UPPER_CASE  (FOO_BAR)
+cr-  to dash-case   (foo-bar)
+``
+
 Swap Header/Source
 -------------------
 :e <%.h
