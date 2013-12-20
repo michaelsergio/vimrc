@@ -74,8 +74,8 @@ d'a     delete from here to mark a
 c'a     change from here to mark a
 y'a     yank   from here to mark a
 :marks  show all marks
-`.      jump to last change
-`"      jump to last exited
+'.      jump to last change
+'"      jump to last exited
 ``      jump back to last jump pos
 ''      jump back to last jump line
 :delmarks ab   delete mark a and b
