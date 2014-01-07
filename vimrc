@@ -56,6 +56,15 @@ augroup python
   au FileType python set autoindent smartindent et sts=4 sw=4 tw=80 fo=croq
 augroup END
 
+augroup go
+  filetype off
+  filetype plugin indent off
+  set runtimepath+=$GOROOT/misc/vim
+  filetype plugin indent on
+  syntax on
+  set tabstop=4 noexpandtab
+  autocmd FileType go autocmd BufWritePre <buffer> Fmt
+augroup END
 
 let g:syntastic_javascript_checkers=['jslint']
 

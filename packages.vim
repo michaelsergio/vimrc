@@ -18,6 +18,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
+Bundle 'jnwhiteh/vim-golang'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
