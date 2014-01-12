@@ -29,7 +29,6 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'matchit.zip'
 Bundle 'tComment'
-"Bundle 'taglist.vim'
 Bundle 'Tagbar'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'

@@ -81,3 +81,7 @@ y'a     yank   from here to mark a
 :delmarks ab   delete mark a and b
 
 
+Show whitespace
+----------------
+set list
+set nolist
