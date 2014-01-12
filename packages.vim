@@ -17,12 +17,16 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree'
-Bundle 'msanders/snipmate.vim'
+Bundle 'scrooloose/syntastic'
 Bundle 'jnwhiteh/vim-golang'
+" Snipmate and dependencies from Github
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle 'honza/vim-snippets'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-Bundle 'Syntastic'
 Bundle 'matchit.zip'
 Bundle 'tComment'
 "Bundle 'taglist.vim'
