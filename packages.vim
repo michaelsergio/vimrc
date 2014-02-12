@@ -24,6 +24,7 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle 'honza/vim-snippets'
+Bundle 'triglav/vim-visual-increment'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'

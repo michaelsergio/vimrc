@@ -48,6 +48,8 @@ augroup filetypedetect
 au! BufRead,BufNewFile *.rhtml setfiletype eruby
 au! BufRead,BufNewFile *.pde   setfiletype java
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md  setf markdown
+
+" Set spell on commit messages.
 au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 augroup END
 
@@ -67,6 +69,10 @@ augroup go
 augroup END
 
 let g:syntastic_javascript_checkers=['jslint']
+
+" For ^A ^X
+" Octal is almost always wrong by default (times that are 07)
+set nrformats=hex
 
 " Sudo Save when vim accidentally opened without sudo
 cmap w!! %!sudo tee > /dev/null %
