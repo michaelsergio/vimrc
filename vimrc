@@ -64,7 +64,7 @@ augroup go
   set runtimepath+=$GOROOT/misc/vim
   filetype plugin indent on
   syntax on
-  set tabstop=4 noexpandtab
+  "set tabstop=4 noexpandtab
   autocmd FileType go autocmd BufWritePre <buffer> Fmt
 augroup END
 
