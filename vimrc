@@ -47,7 +47,7 @@ endfunction
 augroup filetypedetect
 au! BufRead,BufNewFile *.rhtml setfiletype eruby
 au! BufRead,BufNewFile *.pde   setfiletype java
-au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md  setf markdown
+au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.md  setf markdown
 
 " Set spell on commit messages.
 au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
