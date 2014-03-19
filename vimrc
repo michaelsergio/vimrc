@@ -24,6 +24,7 @@ set nu
 set cindent
 set hidden
 set hlsearch
+set wildmenu " Pretty completion menu
 syntax enable
 
 
