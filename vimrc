@@ -15,7 +15,6 @@ set nocompatible
 " Use Vundle to manage plugins
 so ~/.vim/packages.vim
 
-
 filetype plugin indent on     " required!
 
 set softtabstop=2 shiftwidth=2 expandtab
@@ -69,7 +68,11 @@ augroup go
   autocmd FileType go autocmd BufWritePre <buffer> Fmt
 augroup END
 
+" Syntastic lints to use
 let g:syntastic_javascript_checkers=['jslint']
+
+" Have Ag hightlight search terms
+let g:aghighlight=1
 
 " For ^A ^X
 " Octal is almost always wrong by default (times that are 07)
