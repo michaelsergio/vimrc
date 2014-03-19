@@ -23,6 +23,8 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 
+Bundle 'gmist/vim-palette'
+
 
 " Snipmate and dependencies from Github
 Bundle "MarcWeber/vim-addon-mw-utils"

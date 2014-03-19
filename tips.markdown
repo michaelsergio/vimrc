@@ -85,3 +85,20 @@ Show whitespace
 ----------------
 set list
 set nolist
+
+colorscheme
+--------------
+To see whats available
+    :colorscheme 
+and then press <C-d>
+
+Some colorschemes have additional parameters.
+For example
+    :colorscheme solarized
+    :set background=dark
+    :colorscheme solarized
+    :set background=light
+
+Online Preview: 
+    http://vimcolorschemetest.googlecode.com/svn/html/index-html.html
+
