@@ -78,6 +78,13 @@ let g:syntastic_javascript_checkers=['jslint']
 " Have Ag hightlight search terms
 let g:aghighlight=1
 
+" Make sure backspace always works in append mode
+" Without this it only backspaces newly appended text
+" Most distros seems to use this by default
+" Homebrew vim HEAD does not
+set backspace=indent,eol,start
+
+
 " For ^A ^X
 " Octal is almost always wrong by default (times that are 07)
 set nrformats=hex
