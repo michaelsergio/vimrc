@@ -45,12 +45,12 @@ function! s:CloseIfOnlyNerdTreeLeft()
 endfunction
 
 augroup filetypedetect
-au! BufRead,BufNewFile *.rhtml setfiletype eruby
-au! BufRead,BufNewFile *.pde   setfiletype java
-au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.md  setf markdown
+  au! BufRead,BufNewFile *.rhtml setfiletype eruby
+  au! BufRead,BufNewFile *.pde   setfiletype java
+  au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.md  setf markdown
 
-" Set spell on commit messages.
-au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+  " Set spell on commit messages.
+  au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 augroup END
 
 augroup python
@@ -66,6 +66,10 @@ augroup go
   syntax on
   "set tabstop=4 noexpandtab
   autocmd FileType go autocmd BufWritePre <buffer> Fmt
+augroup END
+
+augroup latex
+  set spell
 augroup END
 
 " Syntastic lints to use

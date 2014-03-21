@@ -1,7 +1,7 @@
 Tips
 =====
 
-Case Coercian [abolish.vim]
+Case Coercion [abolish.vim]
 ---------------------------------
 ``
 crc  to camelCase   (fooBar)
