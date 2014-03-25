@@ -45,7 +45,12 @@ Replace (Case nonsensitive)
   :%s/foo/bar/gcI
 Change each 'foo' (case sensitive) to 'bar'; ask for confirmation.
 This may be wanted after using :set ignorecase to make searches case insensitive.
-The g flag means global – each occurrence in the line is changed, rather than just the first. This tip assumes the default setting for the 'gdefault' and 'edcompatible' option (off), which requires that the g flag be included in %s///g to perform a global substitute. Using :set gdefault creates confusion because then %s/// is global, whereas %s///g is not (that is, g reverses its meaning).
+The g flag means global – each occurrence in the line is changed, rather than
+just the first. This tip assumes the default setting for the 'gdefault' and
+'edcompatible' option (off), which requires that the g flag be included in
+%s///g to perform a global substitute. Using :set gdefault creates confusion
+because then %s/// is global, whereas %s///g is not (that is, g reverses its
+meaning).
 
 
 Source 

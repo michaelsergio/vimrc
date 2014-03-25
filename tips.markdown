@@ -102,3 +102,19 @@ For example
 Online Preview: 
     http://vimcolorschemetest.googlecode.com/svn/html/index-html.html
 
+
+line formatting
+-------------------
+To set the line width
+
+    set textwidth=80 
+
+To format a line.
+
+    gq{motion} or gqgq 
+
+To Disable
+
+    set textwidth=0 
+
+

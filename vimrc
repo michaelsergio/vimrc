@@ -72,6 +72,10 @@ augroup latex
   set spell
 augroup END
 
+" Always use 80 character line limits
+" Set to 0 to disable
+set textwidth=80
+
 " Syntastic lints to use
 let g:syntastic_javascript_checkers=['jslint']
 
