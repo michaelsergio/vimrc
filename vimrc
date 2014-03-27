@@ -3,6 +3,7 @@
 " Description: My Vimrc file using bundler
 " Last Modified: November 27, 2013
 
+" See README.md for more installation instructions
 " Install Vundle first
 "  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 "
