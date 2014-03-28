@@ -66,6 +66,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 
 
+" Grammer Checker
+Plugin 'vim-scripts/LanguageTool'
+
 " Brief help
 " :PluginList          - list configured bundles
 " :PluginInstall(!)    - install(update) bundles

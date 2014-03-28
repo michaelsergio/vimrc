@@ -83,6 +83,10 @@ let g:syntastic_javascript_checkers=['jslint']
 " Have Ag hightlight search terms
 let g:aghighlight=1
 
+" Specify language tool jar for grammar checks with
+" :LanguageToolCheck
+let g:languagetool_jar=$GRAMMAR_TOOL
+
 " Make sure backspace always works in append mode
 " Without this it only backspaces newly appended text
 " Most distros seems to use this by default
