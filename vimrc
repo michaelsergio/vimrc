@@ -93,9 +93,12 @@ let g:languagetool_jar=$GRAMMAR_TOOL
 " Homebrew vim HEAD does not
 set backspace=indent,eol,start
 
+" Allow scrolling in terminals (at least iTerm2 for mac)
+set mouse=a
+
 
 " For ^A ^X
-" Octal is almost always wrong by default (times that are 07)
+" Octal is almost always wrong by default IMO (times that are 1:07)
 set nrformats=hex
 
 " Sudo Save when vim accidentally opened without sudo

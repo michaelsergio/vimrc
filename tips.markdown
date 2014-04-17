@@ -1,6 +1,13 @@
 Tips
 =====
 
+Clipboard
+------------
+If compiled in vim:
+check with :version (+clipboard)
+    "*p     Paste from clipboard buffer
+    "*dd    Delete line and put in clipboard buffer
+
 Case Coercion [abolish.vim]
 ---------------------------------
 ``
