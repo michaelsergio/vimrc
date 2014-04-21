@@ -125,3 +125,12 @@ To Disable
     set textwidth=0 
 
 
+literal tab
+-----------------
+Usually I keep expandtab on and despise the use of tabs.
+Golang forces tabs in their style but gofmt handles that.
+Makefiles are a pita since they require literal tabs.
+The magic key to make that happend is :
+    
+    <CTRL-V><Tab> in insert mode
+    # CTRL-V means literal input for next char
