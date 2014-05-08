@@ -96,7 +96,6 @@ set backspace=indent,eol,start
 " Allow scrolling in terminals (at least iTerm2 for mac)
 set mouse=a
 
-
 " For ^A ^X
 " Octal is almost always wrong by default IMO (times that are 1:07)
 set nrformats=hex
@@ -108,6 +107,10 @@ command OnlineHelp ! google-chrome http://vimhelp.appspot.com/usr_toc.txt.html
 
 command HideComments highlight! link Comment Ignore
 command ShowComments highlight! link Comment Comment
+
+" Switches to a hex editor view using xxd
+command HexView %!xxd
+command HexViewReturn %!xxd -r
 
 " Add a cheat sheet for search command (I always forget!)
 command SearchHelp sview ~/.vim/search_tips.markdown
