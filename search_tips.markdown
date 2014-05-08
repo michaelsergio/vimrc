@@ -2,6 +2,10 @@
 ================
 
 
+Count Matches
+---------------
+:%s/pattern//gn
+
 Substitute with tpope/abolish
 --------------------------------
 :Subvert/child{,ren}/adult{,s}/g
