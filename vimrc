@@ -90,7 +90,7 @@ let g:languagetool_jar=$GRAMMAR_TOOL
 " Make sure backspace always works in append mode
 " Without this it only backspaces newly appended text
 " Most distros seems to use this by default
-" Homebrew vim HEAD does not
+" Homebrew vim HEAD (7.4.273) does not
 set backspace=indent,eol,start
 
 " Allow scrolling in terminals (at least iTerm2 for mac)
