@@ -120,3 +120,7 @@ command Tips sview ~/.vim/tips.markdown
 " Common misspelling should go here
 " iabbrev  seperate  separate 
 
+
+" Format Javascript code on save
+au BufWritePost *.js silent !jsfmt --format --write % | edit
+
