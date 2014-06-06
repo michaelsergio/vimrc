@@ -134,3 +134,11 @@ The magic key to make that happend is :
     
     <CTRL-V><Tab> in insert mode
     # CTRL-V means literal input for next char
+
+Find and replace outside vim
+-----------------------------
+On OSX i have to use gnu sed (gsed).
+Add -r for Extended Regexes. Uses basic otherwise.
+
+    find . -name "*.m" -print | xargs sed -i "s/NSLog/TNLogVerbose/g"
+

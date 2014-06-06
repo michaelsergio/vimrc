@@ -25,6 +25,7 @@ Plugin 'scrooloose/nerdtree'
 " Language Specific 
 Plugin 'tpope/vim-rails.git'
 Plugin 'jnwhiteh/vim-golang'
+Plugin 'toyamarinyon/vim-swift'
 
 " Quick generation of HTML
 " Fork of zen coding
@@ -64,6 +65,9 @@ Plugin 'kien/ctrlp.vim'
 " Adds Ag command to vim
 " The Silver Search - A better grep/ack
 Plugin 'rking/ag.vim'
+
+" Awesome status bar
+Plugin 'bling/vim-airline'
 
 
 " Grammer Checker

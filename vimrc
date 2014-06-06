@@ -46,12 +46,21 @@ function! s:CloseIfOnlyNerdTreeLeft()
 endfunction
 
 augroup filetypedetect
-  au! BufRead,BufNewFile *.rhtml setfiletype eruby
-  au! BufRead,BufNewFile *.pde   setfiletype java
-  au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.md  setf markdown
-
+  autocmd!
+  au BufRead,BufNewFile *.rhtml setfiletype eruby
+  au BufRead,BufNewFile *.pde   setfiletype java
+  au BufRead,BufNewFile *.markdown,*.mdown,*.mkd,*.mkdn,*.md  setf markdown
   " Set spell on commit messages.
   au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+
+  " Podspecs
+  " This should work but doesnt. I need to fix this.
+  " au BufNewFile,BufRead,BufWrite *.podspec setfiletype=ruby
+  " au BufNewFile,BufRead,BufWrite *.podspec setlocal filetype=podspec
+  " au BufNewFile,BufRead Podfile setlocal filetype=podfile
+  " au FileType podspec,podfile set syntax=ruby
+  " au FileType podspec set makeprg=pod\ spec\ lint\ %
+  " au FileType podfile set makeprg=pod\ install
 augroup END
 
 augroup python
@@ -87,6 +96,17 @@ let g:aghighlight=1
 " :LanguageToolCheck
 let g:languagetool_jar=$GRAMMAR_TOOL
 
+"Airline configuration
+let g:airline_theme="powerlineish"
+let g:airline#extensions#branch#enabled=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#buffer_min_count = 2
+let g:airline_left_sep = '▶'
+
+" Always have status line on (Needed for airline)
+set laststatus=2
+
 " Make sure backspace always works in append mode
 " Without this it only backspaces newly appended text
 " Most distros seems to use this by default
@@ -118,7 +138,7 @@ command SearchHelp sview ~/.vim/search_tips.markdown
 command Tips sview ~/.vim/tips.markdown
 
 " Common misspelling should go here
-" iabbrev  seperate  separate 
+" iabbrev  seperate  separate
 
 
 " Format Javascript code on save
