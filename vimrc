@@ -96,13 +96,25 @@ let g:aghighlight=1
 " :LanguageToolCheck
 let g:languagetool_jar=$GRAMMAR_TOOL
 
-"Airline configuration
+" Airline configuration
 let g:airline_theme="powerlineish"
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#tabline#buffer_min_count = 2
+" unicode support
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
 let g:airline_left_sep = '▶'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.whitespace = 'Ξ'
+" whitespace detection is annoying
+let g:airline#extensions#whitespace#enabled = 0
 
 " Always have status line on (Needed for airline)
 set laststatus=2
