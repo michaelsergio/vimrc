@@ -1,6 +1,6 @@
 " let Vundle manage Vundle
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 " required! 
 Plugin 'gmarik/vundle'
