@@ -16,6 +16,13 @@ set nocompatible
 " Use Vundle to manage plugins
 so ~/.vim/packages.vim
 
+
+" Force gnome-terminal to use 256 color.
+" It can, but does not by default for some dumb reason.
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
 filetype plugin indent on     " required!
 
 set softtabstop=2 shiftwidth=2 expandtab
