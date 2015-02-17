@@ -142,3 +142,18 @@ Add -r for Extended Regexes. Uses basic otherwise.
 
     find . -name "*.m" -print | xargs sed -i "s/NSLog/TNLogVerbose/g"
 
+
+Word Wrap
+-----------------------
+If you get a file without wrapped text.
+To just view it wrapped:
+    set wrap
+    set linebreak "doesn't hard wrap on characters
+
+To fix manually
+set tw=79
+set formatoptions+=t
+select text
+gq
+
+

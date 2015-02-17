@@ -25,6 +25,7 @@ set cindent
 set hidden
 set hlsearch
 set wildmenu " Pretty completion menu
+set colorcolumn=80 "cc for short
 syntax enable
 
 
@@ -53,6 +54,10 @@ augroup filetypedetect
   " Set spell on commit messages.
   au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 
+  " the following line makes vim ignore camelCase and CamelCase words so they
+  " are not highlighted as spelling mistakes
+  autocmd Syntax * syn match CamelCase "\(\<\|_\)\%(\u\l*\)\{2,}\(\>\|_\)\|\<\%(\l\l*\)\%(\u\l*\)\{1,}\>" transparent containedin=.*Comment.*,.*String.*,VimwikiLink contains=@NoSpell contained
+
   " Podspecs
   " This should work but doesnt. I need to fix this.
   " au BufNewFile,BufRead,BufWrite *.podspec setfiletype=ruby
@@ -65,7 +70,9 @@ augroup END
 
 augroup python
   let g:syntastic_python_checkers=['pylint', 'pep8']
-  au FileType python set autoindent smartindent et sts=4 sw=4 tw=80 fo=croq
+  " Disable docstring warning
+  " :let g:syntastic_quiet_messages = {"regex":  'docstring'}
+  au FileType python set autoindent smartindent et sts=4 sw=4 tw=79 fo=croq
 augroup END
 
 augroup go
@@ -75,19 +82,51 @@ augroup go
   filetype plugin indent on
   syntax on
   "set tabstop=4 noexpandtab
-  autocmd FileType go autocmd BufWritePre <buffer> Fmt
+  " autocmd FileType go autocmd BufWritePre <buffer> Fmt
 augroup END
 
 augroup latex
   set spell
 augroup END
 
+" Ignore Camel Case in Spelling
+fun! IgnoreCamelCaseSpell()
+  syn match CamelCase /\<[A-Z][a-z]\+[A-Z].\{-}\>/ contains=@NoSpell transparent
+  syn cluster Spell add=CamelCase
+endfun
+autocmd BufRead,BufNewFile * :call IgnoreCamelCaseSpell()
+
+
 " Always use 80 character line limits
 " Set to 0 to disable
-set textwidth=80
+set textwidth=79
 
 " Syntastic lints to use
 let g:syntastic_javascript_checkers=['jslint']
+" Have HTML Tidy not complain about  angularjs (ng) elements
+" As well as allow more modern html 5
+let g:syntastic_html_tidy_ignore_errors = [
+    \"trimming empty <i>",
+    \"trimming empty <span>",
+    \"<input> proprietary attribute \"autocomplete\"",
+    \"proprietary attribute \"role\"",
+    \"proprietary attribute \"hidden\"",
+    \" proprietary attribute \"ng-",
+    \]
+" Fancy highlighting
+let g:syntastic_enable_highlighting=1
+let g:syntastic_error_symbol = '✗'                                                                                                               
+
+" Arduino
+" Leader key is \
+" \ac compile    \ad deploy   \as screen
+"let g:vim_arduino_library_path=/Applications/Arduino.app/Contents/Resources/Java
+" let g:vim_arduino_serial_port = /my/serial/port
+"Default: result of `$(ls /dev/tty.* | grep usb)`
+
+
+"haskell plugin wants a browser location
+let g:haddock_browser = "/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
 
 " Have Ag hightlight search terms
 let g:aghighlight=1
@@ -135,6 +174,13 @@ set nrformats=hex
 " Sudo Save when vim accidentally opened without sudo
 cmap w!! %!sudo tee > /dev/null %
 
+" Tabular shortcut for transforming:
+" THIS          into        THAT
+" int abc;             int      abc
+" float *qwert;        float    *qwert;
+cab tw Tabularize /\S\+;
+
+
 command OnlineHelp ! google-chrome http://vimhelp.appspot.com/usr_toc.txt.html
 
 command HideComments highlight! link Comment Ignore
@@ -154,5 +200,11 @@ command Tips sview ~/.vim/tips.markdown
 
 
 " Format Javascript code on save
-au BufWritePost *.js silent !jsfmt --format --write % | edit
+" au BufWritePost *.js silent !jsfmt --format --write % | edit
 
+" Color scheme
+" This incantation is what I need for a dark scheme
+" to work on OS X. Color -> Dark -> Color.
+colorscheme bubblegum
+set background=dark
+colorscheme bubblegum

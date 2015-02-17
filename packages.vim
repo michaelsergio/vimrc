@@ -19,17 +19,35 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'triglav/vim-visual-increment'
 
 
+" Autocomplete
+"Plugin 'Valloric/YouCompleteMe'
+
 " File tree Browser
 Plugin 'scrooloose/nerdtree'
 
 " Language Specific 
 Plugin 'tpope/vim-rails.git'
 Plugin 'jnwhiteh/vim-golang'
+Plugin 'fatih/vim-go'
+Plugin 'pangloss/vim-javascript'
 Plugin 'toyamarinyon/vim-swift'
+Plugin 'lukerandall/haskellmode-vim'
+Plugin 'enomsg/vim-haskellConcealPlus'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'mattreduce/vim-mix'
+Plugin 'carlosgaldino/elixir-snippets'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'tclem/vim-arduino'
+Plugin 'sudar/vim-arduino-syntax'
 
 " Quick generation of HTML
 " Fork of zen coding
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'mattn/emmet-vim'
+Plugin 'gregsexton/MatchTag'
+
+" Have tmux play nice with vim
+Plugin 'christoomey/vim-tmux-navigator'
 
 " Knows how to lint files.
 " Always add command for language used
@@ -41,7 +59,7 @@ Plugin 'rizzatti/funcoo.vim'
 Plugin 'rizzatti/dash.vim'
 
 " Colors!
-Plugin 'gmist/vim-palette'
+Plugin 'flazz/vim-colorschemes'
 
 " Snipmate and dependencies from Github
 " Code snippet support
@@ -69,6 +87,8 @@ Plugin 'rking/ag.vim'
 " Awesome status bar
 Plugin 'bling/vim-airline'
 
+" Tab align variables. For work :(
+Plugin 'godlygeek/tabular'
 
 " Grammer Checker
 Plugin 'vim-scripts/LanguageTool'
