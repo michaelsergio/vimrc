@@ -35,6 +35,11 @@ set wildmenu " Pretty completion menu
 set colorcolumn=80 "cc for short
 syntax enable
 
+" Always use 80 character line limits
+" Set to 0 to disable
+set textwidth=79
+
+
 
 " NERDTree coniguration
 map <F2> :NERDTreeToggle<CR>
@@ -103,11 +108,6 @@ fun! IgnoreCamelCaseSpell()
 endfun
 autocmd BufRead,BufNewFile * :call IgnoreCamelCaseSpell()
 
-
-" Always use 80 character line limits
-" Set to 0 to disable
-set textwidth=79
-
 " Syntastic lints to use
 let g:syntastic_javascript_checkers=['jslint']
 " Have HTML Tidy not complain about  angularjs (ng) elements
@@ -123,6 +123,12 @@ let g:syntastic_html_tidy_ignore_errors = [
 " Fancy highlighting
 let g:syntastic_enable_highlighting=1
 let g:syntastic_error_symbol = '✗'                                                                                                               
+
+" This slows down vim opening considerablly.
+"let g:syntastic_check_on_open = 1
+
+let g:syntastic_lua_checkers = ["luacheck"]
+let g:syntastic_lua_luacheck_args = "--no-unused-args" 
 
 " Arduino
 " Leader key is \
@@ -205,9 +211,16 @@ command Tips sview ~/.vim/tips.markdown
 " Common misspelling should go here
 " iabbrev  seperate  separate
 
+" ROS Launch files
+" autocmd BufRead,BufNewFile *.launch setfiletuype roslaunch
+augroup launch
+  setfiletype roslaunch
+  set nospell
+augroup END
 
 " Format Javascript code on save
 " au BufWritePost *.js silent !jsfmt --format --write % | edit
+
 
 " Color scheme
 " This incantation is what I need for a dark scheme
