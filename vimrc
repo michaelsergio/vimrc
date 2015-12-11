@@ -128,7 +128,7 @@ let g:syntastic_html_tidy_ignore_errors = [
 let g:syntastic_enable_highlighting=1
 let g:syntastic_error_symbol = '✗'                                                                                                               
 
-" This slows down vim opening considerablly.
+" This slows down vim opening considerably.
 "let g:syntastic_check_on_open = 1
 
 let g:syntastic_lua_checkers = ["luacheck"]
@@ -145,7 +145,7 @@ let g:syntastic_lua_luacheck_args = "--no-unused-args"
 "haskell plugin wants a browser location
 let g:haddock_browser = "/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
 
-" Have Ag hightlight search terms
+" Have Ag highlight search terms
 let g:aghighlight=1
 
 " Specify language tool jar for grammar checks with
