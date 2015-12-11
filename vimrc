@@ -25,6 +25,9 @@ endif
 
 filetype plugin indent on     " required!
 
+" I don't usually want this, but left here for when needed.
+set ignorecase
+
 set softtabstop=2 shiftwidth=2 expandtab
 set ruler
 set nu
@@ -34,6 +37,7 @@ set hlsearch
 set wildmenu " Pretty completion menu
 set colorcolumn=80 "cc for short
 syntax enable
+
 
 " Always use 80 character line limits
 " Set to 0 to disable
@@ -193,6 +197,30 @@ cmap w!! %!sudo tee > /dev/null %
 " float *qwert;        float    *qwert;
 cab tw Tabularize /\S\+;
 
+" Highlight all instances of word under cursor, when idle.
+" Useful when studying strange source code.
+" Type z/ to toggle highlighting on/off.
+nnoremap z/ :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
+function! AutoHighlightToggle()
+   let @/ = ''
+   if exists('#auto_highlight')
+     au! auto_highlight
+     augroup! auto_highlight
+     setl updatetime=200
+     echo 'Highlight current word: off'
+     return 0
+  else
+    augroup auto_highlight
+    au!
+    au CursorHold * let @/ = '\V\<'.escape(expand('<cword>'), '\').'\>'
+    augroup end
+    setl updatetime=500
+    echo 'Highlight current word: ON'
+  return 1
+ endif
+endfunction
+
+
 
 command OnlineHelp ! google-chrome http://vimhelp.appspot.com/usr_toc.txt.html
 
@@ -208,19 +236,23 @@ command SearchHelp sview ~/.vim/search_tips.markdown
 " Cheat sheet for other random intresting things
 command Tips sview ~/.vim/tips.markdown
 
-" Common misspelling should go here
-" iabbrev  seperate  separate
 
 " ROS Launch files
 " autocmd BufRead,BufNewFile *.launch setfiletuype roslaunch
 augroup launch
-  setfiletype roslaunch
+  setfiletype xml
   set nospell
 augroup END
 
+" Syntax highlighting for rockspec files.
+au BufNewFile,BufRead *.rockspec set filetype=lua
+au BufNewFile,BufRead *.cuh set filetype=cuda
+au BufNewFile,BufRead *.cfg set filetype=python
+au BufNewFile,BufRead *.launch set filetype=xml
+au FileType gitcommit set spell
+
 " Format Javascript code on save
 " au BufWritePost *.js silent !jsfmt --format --write % | edit
-
 
 " Color scheme
 " This incantation is what I need for a dark scheme
@@ -228,3 +260,9 @@ augroup END
 colorscheme bubblegum
 set background=dark
 colorscheme bubblegum
+
+" Common misspelling should go here
+" Make sure no space at the end.
+" iabbrev seperate  separate
+iabbrev thier their
+

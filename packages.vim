@@ -43,6 +43,7 @@ Plugin 'sudar/vim-arduino-syntax'
 Plugin 'jbohren/vim-ros' 
 Plugin 'vim-scripts/a.vim' " Alternate Files for .c->.h with :A
 Plugin 'vim-scripts/ifdef-highlighting'
+Plugin 'AndrewRadev/linediff.vim'
 
 " Quick generation of HTML
 " Fork of zen coding
