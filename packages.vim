@@ -101,6 +101,9 @@ Plugin 'godlygeek/tabular'
 " Grammer Checker
 Plugin 'vim-scripts/LanguageTool'
 
+" MRU files on startup.
+Plugin 'mhinz/vim-startify'
+
 " Brief help
 " :PluginList          - list configured bundles
 " :PluginInstall(!)    - install(update) bundles

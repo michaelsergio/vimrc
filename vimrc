@@ -237,6 +237,11 @@ command SearchHelp sview ~/.vim/search_tips.markdown
 command Tips sview ~/.vim/tips.markdown
 
 
+" Fix shift key typos
+" source for more: https://github.com/spf13/spf13-vim/blob/3.0/.vimrc
+command! -bang -nargs=* -complete=file W w<bang> <args>
+command! -bang Q q<bang>
+
 " ROS Launch files
 " autocmd BufRead,BufNewFile *.launch setfiletuype roslaunch
 augroup launch
