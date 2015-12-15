@@ -42,6 +42,10 @@ Plugin 'tclem/vim-arduino'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'rust-lang/rust.vim'
 
+Plugin 'jbohren/vim-ros' 
+Plugin 'vim-scripts/a.vim' " Alternate Files for .c->.h with :A
+Plugin 'vim-scripts/ifdef-highlighting'
+Plugin 'AndrewRadev/linediff.vim'
 
 " Quick generation of HTML
 " Fork of zen coding
@@ -54,6 +58,10 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Knows how to lint files.
 " Always add command for language used
 Plugin 'scrooloose/syntastic'
+
+" Have search put a count in the status line
+Plugin 'henrik/vim-indexed-search'
+
 
 " Dash Plugins
 " Dash is used for looking up documentation on OS X
@@ -95,14 +103,16 @@ Plugin 'godlygeek/tabular'
 " Grammer Checker
 Plugin 'vim-scripts/LanguageTool'
 
+" MRU files on startup.
+Plugin 'mhinz/vim-startify'
+
 " Brief help
 " :PluginList          - list configured bundles
 " :PluginInstall(!)    - install(update) bundles
 " :PluginSearch(!) foo - search(or refresh cache first) for foo
 " :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
 "
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Plugin command are not allowed..
+" see :h vundle for more details or wiki for FAQ " NOTE: comments after Plugin command are not allowed..
 "
 " Source Reminders:
 " Plugin 'vimscript_package'
