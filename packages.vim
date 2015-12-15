@@ -40,6 +40,8 @@ Plugin 'carlosgaldino/elixir-snippets'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'tclem/vim-arduino'
 Plugin 'sudar/vim-arduino-syntax'
+Plugin 'rust-lang/rust.vim'
+
 
 " Quick generation of HTML
 " Fork of zen coding
