@@ -21,6 +21,7 @@ Plugin 'triglav/vim-visual-increment'
 
 " Autocomplete
 "Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shougo/neocomplete.vim'
 
 " File tree Browser
 Plugin 'scrooloose/nerdtree'
@@ -96,6 +97,7 @@ Plugin 'rking/ag.vim'
 
 " Awesome status bar
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Tab align variables. For work :(
 Plugin 'godlygeek/tabular'
