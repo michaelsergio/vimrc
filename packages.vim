@@ -42,6 +42,18 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'tclem/vim-arduino'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'rust-lang/rust.vim'
+Plugin 'saltstack/salt-vim'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-haml'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Shougo/vimproc.vim' " dep for tsuquyomi
+Plugin 'Quramy/tsuquyomi' "typescript omni
+Plugin 'lambdatoast/elm.vim'
+
+Plugin 'elzr/vim-json'
+Plugin 'mitsuhiko/vim-jinja'
+
 
 Plugin 'jbohren/vim-ros' 
 Plugin 'vim-scripts/a.vim' " Alternate Files for .c->.h with :A
@@ -107,6 +119,12 @@ Plugin 'vim-scripts/LanguageTool'
 
 " MRU files on startup.
 Plugin 'mhinz/vim-startify'
+
+" OrgMode
+Plugin 'jceb/vim-orgmode'
+
+" Show marks
+Plugin 'https://github.com/kshenoy/vim-signature'
 
 " Brief help
 " :PluginList          - list configured bundles
