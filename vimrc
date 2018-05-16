@@ -113,7 +113,7 @@ endfun
 autocmd BufRead,BufNewFile * :call IgnoreCamelCaseSpell()
 
 " Syntastic lints to use
-let g:syntastic_javascript_checkers=['jslint']
+let g:syntastic_javascript_checkers=['jshint']
 " Have HTML Tidy not complain about  angularjs (ng) elements
 " As well as allow more modern html 5
 let g:syntastic_html_tidy_ignore_errors = [

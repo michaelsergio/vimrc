@@ -42,6 +42,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'tclem/vim-arduino'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'rust-lang/rust.vim'
+Plugin 'udalov/kotlin-vim'
 
 Plugin 'jbohren/vim-ros' 
 Plugin 'vim-scripts/a.vim' " Alternate Files for .c->.h with :A
