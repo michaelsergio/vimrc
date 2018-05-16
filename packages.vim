@@ -43,8 +43,13 @@ Plugin 'tclem/vim-arduino'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'rust-lang/rust.vim'
 Plugin 'udalov/kotlin-vim'
+Plugin 'saltstack/salt-vim'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'lambdatoast/elm.vim'
 
-Plugin 'jbohren/vim-ros' 
+Plugin 'elzr/vim-json'
+Plugin 'mustache/vim-mustache-handlebars'
+
 Plugin 'vim-scripts/a.vim' " Alternate Files for .c->.h with :A
 Plugin 'vim-scripts/ifdef-highlighting'
 Plugin 'AndrewRadev/linediff.vim'
@@ -63,7 +68,6 @@ Plugin 'scrooloose/syntastic'
 
 " Have search put a count in the status line
 Plugin 'henrik/vim-indexed-search'
-
 
 " Dash Plugins
 " Dash is used for looking up documentation on OS X
@@ -108,6 +112,12 @@ Plugin 'vim-scripts/LanguageTool'
 
 " MRU files on startup.
 Plugin 'mhinz/vim-startify'
+
+" OrgMode
+Plugin 'jceb/vim-orgmode'
+
+" Show marks
+Plugin 'https://github.com/kshenoy/vim-signature'
 
 " Brief help
 " :PluginList          - list configured bundles

@@ -105,6 +105,10 @@ augroup latex
   set spell
 augroup END
 
+augroup ruby
+  setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+augroup END
+
 " Ignore Camel Case in Spelling
 fun! IgnoreCamelCaseSpell()
   syn match CamelCase /\<[A-Z][a-z]\+[A-Z].\{-}\>/ contains=@NoSpell transparent
@@ -255,6 +259,11 @@ au BufNewFile,BufRead *.cuh set filetype=cuda
 au BufNewFile,BufRead *.cfg set filetype=python
 au BufNewFile,BufRead *.launch set filetype=xml
 au FileType gitcommit set spell
+
+
+" Salt Stated file
+"au BufRead,BufNewFile *.sls set filetype=yaml
+
 
 " Format Javascript code on save
 " au BufWritePost *.js silent !jsfmt --format --write % | edit
