@@ -271,3 +271,4 @@ colorscheme bubblegum
 " iabbrev seperate  separate
 iabbrev thier their
 
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
