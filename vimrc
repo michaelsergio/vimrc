@@ -8,20 +8,25 @@
 "  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 "
 
-
 " be iMproved
 set nocompatible
 " required
 
 " Use Vundle to manage plugins
-so ~/.vim/packages.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 
+" let Vundle manage Vundle, required
+so ~/vimrc/packages.vim
+
+so ~/.vim/bundle/vim-colorschemes/colors/bubblegum-256-dark.vim
 
 " Force gnome-terminal to use 256 color.
 " It can, but does not by default for some dumb reason.
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
+
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
 filetype plugin indent on     " required!
 
@@ -94,11 +99,14 @@ augroup END
 augroup go
   filetype off
   filetype plugin indent off
-  set runtimepath+=$GOROOT/misc/vim
+  "set runtimepath+=$GOROOT/misc/vim
   filetype plugin indent on
   syntax on
   "set tabstop=4 noexpandtab
   " autocmd FileType go autocmd BufWritePre <buffer> Fmt
+  let g:go_bin_path = $HOME."/go/bin"
+
+
 augroup END
 
 augroup latex
@@ -258,6 +266,7 @@ au BufNewFile,BufRead *.rockspec set filetype=lua
 au BufNewFile,BufRead *.cuh set filetype=cuda
 au BufNewFile,BufRead *.cfg set filetype=python
 au BufNewFile,BufRead *.launch set filetype=xml
+au BufNewFile,BufRead known_hosts set filetype=sh
 au FileType gitcommit set spell
 
 
@@ -271,13 +280,12 @@ au FileType gitcommit set spell
 " Color scheme
 " This incantation is what I need for a dark scheme
 " to work on OS X. Color -> Dark -> Color.
-colorscheme bubblegum
 set background=dark
-colorscheme bubblegum
 
 " Common misspelling should go here
 " Make sure no space at the end.
 " iabbrev seperate  separate
 iabbrev thier their
 
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+"imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+

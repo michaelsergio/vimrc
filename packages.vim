@@ -1,12 +1,11 @@
 " let Vundle manage Vundle
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 " required! 
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
-" Some of tpopes improvements
-Plugin 'tpope/vim-fugitive'
+" Some of tpopes improvements Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-repeat'
@@ -28,27 +27,18 @@ Plugin 'scrooloose/nerdtree'
 
 " Language Specific 
 Plugin 'tpope/vim-rails.git'
-Plugin 'jnwhiteh/vim-golang'
 Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 Plugin 'toyamarinyon/vim-swift'
-Plugin 'lukerandall/haskellmode-vim'
-Plugin 'enomsg/vim-haskellConcealPlus'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'mattreduce/vim-mix'
-Plugin 'carlosgaldino/elixir-snippets'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'tclem/vim-arduino'
-Plugin 'sudar/vim-arduino-syntax'
 Plugin 'rust-lang/rust.vim'
 Plugin 'udalov/kotlin-vim'
 Plugin 'saltstack/salt-vim'
 Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'lambdatoast/elm.vim'
+Plugin 'leafgarland/typescript-vim'
+"Plugin 'Quramy/tsuquyomi' " Typescript completion - Very slow
 
 Plugin 'elzr/vim-json'
-Plugin 'mustache/vim-mustache-handlebars'
 
 Plugin 'vim-scripts/a.vim' " Alternate Files for .c->.h with :A
 Plugin 'vim-scripts/ifdef-highlighting'
@@ -56,7 +46,7 @@ Plugin 'AndrewRadev/linediff.vim'
 
 " Quick generation of HTML
 " Fork of zen coding
-Plugin 'mattn/emmet-vim'
+Plugin 'mattn/emmet-vim' " BROKEN!
 Plugin 'gregsexton/MatchTag'
 
 " Have tmux play nice with vim
@@ -69,20 +59,8 @@ Plugin 'scrooloose/syntastic'
 " Have search put a count in the status line
 Plugin 'henrik/vim-indexed-search'
 
-" Dash Plugins
-" Dash is used for looking up documentation on OS X
-Plugin 'rizzatti/funcoo.vim'
-Plugin 'rizzatti/dash.vim'
-
 " Colors!
 Plugin 'flazz/vim-colorschemes'
-
-" Snipmate and dependencies from Github
-" Code snippet support
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
 
 " Makes % matching work on strings and comments
 Plugin 'matchit.zip'
@@ -132,3 +110,5 @@ Plugin 'https://github.com/kshenoy/vim-signature'
 " Plugin 'git://nongithub_source/command-t.git'
 " Plugin 'github/package_from_github'
 " Plugin 'file:///Users/gmarik/path/to/plugin'
+
+call vundle#end()
