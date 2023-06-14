@@ -26,17 +26,18 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'scrooloose/nerdtree'
 
 " Language Specific 
-Plugin 'tpope/vim-rails.git'
 Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
-Plugin 'toyamarinyon/vim-swift'
-Plugin 'derekwyatt/vim-scala'
 Plugin 'rust-lang/rust.vim'
 Plugin 'udalov/kotlin-vim'
-Plugin 'saltstack/salt-vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'maxbane/vim-asm_ca65'
+"Plugin 'tpope/vim-rails.git'
 "Plugin 'Quramy/tsuquyomi' " Typescript completion - Very slow
+"Plugin 'saltstack/salt-vim'
+"Plugin 'toyamarinyon/vim-swift'
+"Plugin 'derekwyatt/vim-scala'
 
 Plugin 'elzr/vim-json'
 

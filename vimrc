@@ -89,11 +89,15 @@ augroup filetypedetect
   " au FileType podfile set makeprg=pod\ install
 augroup END
 
+au BufRead,BufNewFile Jenkinsfile setfiletype groovy
+
 augroup python
-  let g:syntastic_python_checkers=['pylint', 'pep8']
+  let g:syntastic_python_checkers=[]
+  "let g:syntastic_python_checkers=['pylint', 'pep8']
   " Disable docstring warning
   " :let g:syntastic_quiet_messages = {"regex":  'docstring'}
-  au FileType python set autoindent smartindent et sts=4 sw=4 tw=79 fo=croq
+  au FileType python set autoindent smartindent et sts=4 sw=4 tw=88 fo=croq
+  set colorcolumn=88
 augroup END
 
 augroup go
@@ -105,8 +109,6 @@ augroup go
   "set tabstop=4 noexpandtab
   " autocmd FileType go autocmd BufWritePre <buffer> Fmt
   let g:go_bin_path = $HOME."/go/bin"
-
-
 augroup END
 
 augroup latex
@@ -267,6 +269,7 @@ au BufNewFile,BufRead *.cuh set filetype=cuda
 au BufNewFile,BufRead *.cfg set filetype=python
 au BufNewFile,BufRead *.launch set filetype=xml
 au BufNewFile,BufRead known_hosts set filetype=sh
+au BufNewFile,BufRead *.asm,*.s,*.inc set ft=asm_ca65
 au FileType gitcommit set spell
 
 
