@@ -79,9 +79,11 @@ Plugin 'kien/ctrlp.vim'
 " The Silver Search - A better grep/ack
 Plugin 'rking/ag.vim'
 
+
+" I disabled the airline plugin because it keeps rendering garbage
 " Awesome status bar
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'bling/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
 
 " Tab align variables. For work :(
 Plugin 'godlygeek/tabular'
